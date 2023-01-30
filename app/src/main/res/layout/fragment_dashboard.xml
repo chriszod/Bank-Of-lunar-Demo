@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.dashboard.DashboardFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="40dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+                    <include
+                        layout="@layout/fragment_dashboard_account"
+                        app:accountType="@{`Savings Account`}"
+                        app:value="@{`0.00`}" />
+
+                    <include
+                        layout="@layout/fragment_dashboard_account"
+                        app:accountType="@{`Personal Account`}" />
+
+                    <include
+                        layout="@layout/fragment_dashboard_account"
+                        app:accountType="@{`Roth IRA Account`}"
+                        app:value="@{`0.00`}" />
+
+                    <include
+                        layout="@layout/fragment_dashboard_account"
+                        app:accountType="@{`SEP Account`}"
+                        app:value="@{`0.00`}" />
+
+                    <include
+                        layout="@layout/fragment_dashboard_account"
+                        app:accountType="@{`Joint Account`}"
+                        app:value="@{`0.00`}" />
+
+                    <include
+                        layout="@layout/fragment_dashboard_account"
+                        app:accountType="@{`Traditional Account`}"
+                        app:value="@{`0.00`}" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp"
+                android:columnCount="2"
+                android:layout_marginTop="20dp">
+
+                <include
+                    layout="@layout/fragment_dashboard_total"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardColor="@{@color/myLightOrange}"
+                    app:cardTextColor="@{@color/myOrange}"
+                    app:totalType="@{`Total Balance`}"
+                    app:value="@{`0.00`}"/>
+
+                <include
+                    layout="@layout/fragment_dashboard_total"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardColor="@{@color/myLightBlue}"
+                    app:cardTextColor="@{@color/black}"
+                    app:totalType="@{`Total Funding`}"
+                    app:value="@{`0.00`}"/>
+
+                <include
+                    layout="@layout/fragment_dashboard_total"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardColor="@{@color/myLightGreen}"
+                    app:cardTextColor="@{@color/black}"
+                    app:totalType="@{`Total Withdrawn`}"
+                    app:value="@{`0.00`}"/>
+
+                <include
+                    layout="@layout/fragment_dashboard_total"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardColor="@{@color/myLightGreen}"
+                    app:cardTextColor="@{@color/black}"
+                    app:totalType="@{`Market Rate`}"
+                    app:value="@{`0.00`}"/>
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

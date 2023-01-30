@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">bankoflunar</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_activity">Activity</string>
+    <string name="menu_investing">Investing</string>
+    <string name="menu_trading">Trading</string>
+    <string name="menu_real_estate">Real Estate</string>
+    <string name="menu_deposit">Deposit</string>
+    <string name="menu_withdraw">Withdraw</string>
+    <string name="menu_transfer">Transfer</string>
+    <string name="menu_rewards">Rewards</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="basic_text">Basic</string>
+    <string name="investment_text">Investment</string>
+    <string name="textView_basic_interest">Interest - %0.5</string>
+    <string name="textview_basic_interestUpdate">Interest Update - 1 day</string>
+    <string name="textView_basic_duration">Duration - 10 days</string>
+    <string name="textView_basic_capital">Capital - YES</string>
+    <string name="button_basic">Invest</string>
+    <string name="black_text">Black</string>
+    <string name="textView_black_interest">Interest - %0.8</string>
+    <string name="textview_black_interestUpdate">Interest Update - 1 day</string>
+    <string name="textView_black_duration">Duration - 20 Days</string>
+    <string name="textView_black_capital">Capital - YES</string>
+    <string name="button_black">Invest</string>
+    <string name="retirement_text">Retirement</string>
+    <string name="textView_retirement_interest">Interest - %1.0</string>
+    <string name="textview_retirement_interestUpdate">Interest Update - 6 months</string>
+    <string name="textView_retirement_duration">Duration - 12 months</string>
+    <string name="textView_retirement_capital">Capital - YES</string>
+    <string name="button_retirement">Invest</string>
+    <string name="Trading_text">Trading</string>
+    <string name="realEstate_text">Real Estate</string>
+    <string name="textView_realEstate_interest">Interest - %10</string>
+    <string name="textview_realEstate_interestUpdate">Interest Update - 90 days</string>
+    <string name="textView_realEstate_duration">Duration - 6 months</string>
+    <string name="textView_realEstate_capital">Capital - YES</string>
+</resources>

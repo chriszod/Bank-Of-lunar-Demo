@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Dashboard"
+            android:icon="@drawable/ic_menu_dashboard"
+            android:title="@string/menu_dashboard" />
+        <item
+            android:id="@+id/nav_activity"
+            android:icon="@drawable/ic_menu_activity"
+            android:title="@string/menu_activity" />
+        <item
+            android:id="@+id/nav_investing"
+            android:icon="@drawable/ic_menu_real_estate"
+            android:title="@string/menu_investing" />
+        <item
+            android:id="@+id/nav_trading"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_trading" />
+        <item
+            android:id="@+id/nav_real_estate"
+            android:icon="@drawable/ic_menu_real_estate"
+            android:title="@string/menu_real_estate" />
+        <item
+            android:id="@+id/nav_deposit"
+            android:icon="@drawable/ic_menu_deposit"
+            android:title="@string/menu_deposit" />
+        <item
+            android:id="@+id/nav_withdraw"
+            android:icon="@drawable/ic_menu_withdraw"
+            android:title="@string/menu_withdraw" />
+        <item
+            android:id="@+id/nav_transfer"
+            android:icon="@drawable/ic_menu_transfer"
+            android:title="@string/menu_transfer" />
+        <item
+            android:id="@+id/nav_rewards"
+            android:icon="@drawable/ic_menu_rewards"
+            android:title="@string/menu_rewards" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="@string/menu_settings" />
+    </group>
+</menu>
