@@ -30,11 +30,6 @@ class TradingFragment : Fragment() {
 
         _binding = FragmentTradingBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textTrading
-        tradingViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 
