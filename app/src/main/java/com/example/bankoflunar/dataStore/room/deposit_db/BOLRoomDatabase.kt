@@ -8,18 +8,18 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [DepositDetails::class], version = 1, exportSchema = false)
 
-abstract class DepositDetailsRoomDatabase: RoomDatabase() {
+abstract class BOLRoomDatabase: RoomDatabase() {
 
     abstract fun depositDetailsDao(): DepositDetailsDao
 
     companion object {
         @Volatile
-        private var INSTANCE: DepositDetailsRoomDatabase? = null
-        fun getDatabase(context: Context): DepositDetailsRoomDatabase {
+        private var INSTANCE: BOLRoomDatabase? = null
+        fun getDatabase(context: Context): BOLRoomDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    DepositDetailsRoomDatabase::class.java, "depositDetails_database"
+                    BOLRoomDatabase::class.java, "depositDetails_database"
                 )
                     .fallbackToDestructiveMigration()
                     .build()
@@ -35,5 +35,5 @@ abstract class DepositDetailsRoomDatabase: RoomDatabase() {
 }
 
 class DepositApplication: Application(){
-    val database: DepositDetailsRoomDatabase by lazy { DepositDetailsRoomDatabase.getDatabase(this) }
+    val database: BOLRoomDatabase by lazy { BOLRoomDatabase.getDatabase(this) }
 }
