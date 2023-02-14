@@ -19,7 +19,7 @@ abstract class BOLRoomDatabase: RoomDatabase() {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    BOLRoomDatabase::class.java, "depositDetails_database"
+                    BOLRoomDatabase::class.java, "BOLRoomdatabase"
                 )
                     .fallbackToDestructiveMigration()
                     .build()
