@@ -15,7 +15,11 @@
         android:id="@+id/nav_activity"
         android:name="com.example.bankoflunar.ui.activity.ActivityFragment"
         android:label="@string/menu_activity"
-        tools:layout="@layout/fragment_activity" />
+        tools:layout="@layout/fragment_activity" >
+        <action
+            android:id="@+id/action_nav_activity_to_depositDetailsFragment"
+            app:destination="@id/depositDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_investing"
@@ -64,4 +68,19 @@
         android:name="com.example.bankoflunar.ui.settings.SettingsFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/depositDetailsFragment"
+        android:name="com.example.bankoflunar.ui.activity.deposit.DepositDetailsFragment"
+        android:label="fragment_deposit_details"
+        tools:layout="@layout/fragment_deposit_details" >
+        <action
+            android:id="@+id/action_depositDetailsFragment_to_activityDepositDetailsFragment"
+            app:destination="@id/activityDepositDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/activityDepositDetailsFragment"
+        android:name="com.example.bankoflunar.ui.activity.deposit.ActivityDepositDetailsFragment"
+        android:label="ActivityDepositDetailsFragment" />
 </navigation>
