@@ -7,6 +7,22 @@
         <variable
             name="goToDeposit"
             type="Runnable" />
+
+        <variable
+            name="goToWithdrawal"
+            type="Runnable" />
+
+        <variable
+            name="goToInvestment"
+            type="Runnable" />
+
+        <variable
+            name="goToTrading"
+            type="Runnable" />
+
+        <variable
+            name="goToInternalTransfer"
+            type="Runnable" />
     </data>
 
     <ScrollView
@@ -34,10 +50,11 @@
                 android:layout_marginTop="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Withdrawals"
+                android:onClick="@{() -> goToWithdrawal.run()}"
                 android:textSize="20sp" />
 
             <View
@@ -46,10 +63,11 @@
                 android:layout_marginTop="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Investments"
+                android:onClick="@{() -> goToInvestment.run()}"
                 android:textSize="20sp" />
 
             <View
@@ -58,10 +76,11 @@
                 android:layout_marginTop="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Trading"
+                android:onClick="@{() -> goToTrading.run()}"
                 android:textSize="20sp" />
 
             <View
@@ -70,10 +89,11 @@
                 android:layout_marginTop="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Internal Transfers"
+                android:onClick="@{() -> goToInternalTransfer.run()}"
                 android:textSize="20sp" />
 
         </LinearLayout>

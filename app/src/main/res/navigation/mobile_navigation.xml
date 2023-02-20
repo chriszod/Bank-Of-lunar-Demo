@@ -19,6 +19,18 @@
         <action
             android:id="@+id/action_nav_activity_to_depositDetailsFragment"
             app:destination="@id/depositDetailsFragment" />
+        <action
+            android:id="@+id/action_nav_activity_to_withdrawalDetailsFragment"
+            app:destination="@id/withdrawalDetailsFragment" />
+        <action
+            android:id="@+id/action_nav_activity_to_internalTransfersDetailsFragment"
+            app:destination="@id/internalTransfersDetailsFragment" />
+        <action
+            android:id="@+id/action_nav_activity_to_investmentDetailsFragment"
+            app:destination="@id/investmentDetailsFragment" />
+        <action
+            android:id="@+id/action_nav_activity_to_tradingDetailsFragment"
+            app:destination="@id/tradingDetailsFragment" />
     </fragment>
 
     <fragment
@@ -83,4 +95,52 @@
         android:id="@+id/activityDepositDetailsFragment"
         android:name="com.example.bankoflunar.ui.activity.deposit.ActivityDepositDetailsFragment"
         android:label="ActivityDepositDetailsFragment" />
+    <fragment
+        android:id="@+id/withdrawalDetailsFragment"
+        android:name="com.example.bankoflunar.ui.activity.withdrawals.WithdrawalDetailsFragment"
+        android:label="WithdrawalDetailsFragment" >
+        <action
+            android:id="@+id/action_withdrawalDetailsFragment_to_withdrawalDetailsMoreInfoFragment"
+            app:destination="@id/withdrawalDetailsMoreInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/withdrawalDetailsMoreInfoFragment"
+        android:name="com.example.bankoflunar.ui.activity.withdrawals.WithdrawalDetailsMoreInfoFragment"
+        android:label="WithdrawalDetailsMoreInfoFragment" />
+    <fragment
+        android:id="@+id/internalTransfersDetailsFragment"
+        android:name="com.example.bankoflunar.ui.activity.internalTransfers.InternalTransfersDetailsFragment"
+        android:label="InternalTransfersDetailsFragment" >
+        <action
+            android:id="@+id/action_internalTransfersDetailsFragment_to_internalTransfersDetailsMoreInfoFragment"
+            app:destination="@id/internalTransfersDetailsMoreInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/internalTransfersDetailsMoreInfoFragment"
+        android:name="com.example.bankoflunar.ui.activity.internalTransfers.InternalTransfersDetailsMoreInfoFragment"
+        android:label="InternalTransfersDetailsMoreInfoFragment" />
+    <fragment
+        android:id="@+id/investmentDetailsFragment"
+        android:name="com.example.bankoflunar.ui.activity.investments.InvestmentDetailsFragment"
+        android:label="InvestmentDetailsFragment" >
+        <action
+            android:id="@+id/action_investmentDetailsFragment_to_investmentDetailsMoreInfoFragment"
+            app:destination="@id/investmentDetailsMoreInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/investmentDetailsMoreInfoFragment"
+        android:name="com.example.bankoflunar.ui.activity.investments.InvestmentDetailsMoreInfoFragment"
+        android:label="InvestmentDetailsMoreInfoFragment" />
+    <fragment
+        android:id="@+id/tradingDetailsFragment"
+        android:name="com.example.bankoflunar.ui.activity.trading.TradingDetailsFragment"
+        android:label="TradingDetailsFragment" >
+        <action
+            android:id="@+id/action_tradingDetailsFragment_to_tradingDetailsMoreInfoFragment"
+            app:destination="@id/tradingDetailsMoreInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradingDetailsMoreInfoFragment"
+        android:name="com.example.bankoflunar.ui.activity.trading.TradingDetailsMoreInfoFragment"
+        android:label="TradingDetailsMoreInfoFragment" />
 </navigation>

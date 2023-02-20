@@ -1,4 +1,4 @@
-package com.example.bankoflunar.ui.activity.deposit
+package com.example.bankoflunar.ui.activity.internalTransfers
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,16 +8,13 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bankoflunar.R
-import com.example.bankoflunar.databinding.FragmentDepositDetailsBinding
-import com.example.bankoflunar.ui.deposit.model.DepositGenerator
+import com.example.bankoflunar.databinding.FragmentInternalTransfersDetailsBinding
+import com.example.bankoflunar.ui.transfer.model.InternalTransferGenerator
 
-
-
-class DepositDetailsFragment : Fragment() {
-    private var _binding: FragmentDepositDetailsBinding? = null
+class InternalTransfersDetailsFragment : Fragment() {
+    private var _binding: FragmentInternalTransfersDetailsBinding? = null
     val binding get()  = _binding!!
     private lateinit var recyclerView: RecyclerView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,21 +27,23 @@ class DepositDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentDepositDetailsBinding.inflate(inflater, container, false)
+        // Inflate the layout for this fragment
+        _binding = FragmentInternalTransfersDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val data = DepositGenerator.getDepositData(100)
+        val data = InternalTransferGenerator.getInternalTransfersData(100)
         recyclerView = binding.recyclerView
-        recyclerView.adapter = DepositDetailsAdapter(
+        recyclerView.adapter = InternalTransfersDetailsAdapter(
             dataSet = data,
-            gotoDepositDetails = { gotoDepositDetails() },
+            goToInternalTransfersDetails = { gotoInternalTransfersDetails() },
         )
     }
 
-    private fun gotoDepositDetails() {
-        findNavController().navigate(R.id.action_depositDetailsFragment_to_activityDepositDetailsFragment)
+    private fun gotoInternalTransfersDetails() {
+        findNavController().navigate(R.id.action_internalTransfersDetailsFragment_to_internalTransfersDetailsMoreInfoFragment)
     }
+
 }

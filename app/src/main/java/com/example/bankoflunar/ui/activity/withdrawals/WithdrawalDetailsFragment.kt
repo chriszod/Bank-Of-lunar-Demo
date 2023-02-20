@@ -1,4 +1,4 @@
-package com.example.bankoflunar.ui.activity.deposit
+package com.example.bankoflunar.ui.activity.withdrawals
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,21 +8,17 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bankoflunar.R
-import com.example.bankoflunar.databinding.FragmentDepositDetailsBinding
-import com.example.bankoflunar.ui.deposit.model.DepositGenerator
+import com.example.bankoflunar.databinding.FragmentWithdrawalDetailsBinding
+import com.example.bankoflunar.ui.withdraw.model.WithdrawalGenerator
 
-
-
-class DepositDetailsFragment : Fragment() {
-    private var _binding: FragmentDepositDetailsBinding? = null
+class WithdrawalDetailsFragment : Fragment() {
+    private var _binding: FragmentWithdrawalDetailsBinding? = null
     val binding get()  = _binding!!
     private lateinit var recyclerView: RecyclerView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-
         }
     }
 
@@ -30,21 +26,24 @@ class DepositDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentDepositDetailsBinding.inflate(inflater, container, false)
+        // Inflate the layout for this fragment
+        _binding = FragmentWithdrawalDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val data = DepositGenerator.getDepositData(100)
+        val data = WithdrawalGenerator.getWithdrawalData(100)
         recyclerView = binding.recyclerView
-        recyclerView.adapter = DepositDetailsAdapter(
+        recyclerView.adapter = WithdrawalDetailsAdapter(
             dataSet = data,
-            gotoDepositDetails = { gotoDepositDetails() },
+            goToWithdrawalDetails = { gotoWithdrawalDetails() },
         )
     }
 
-    private fun gotoDepositDetails() {
-        findNavController().navigate(R.id.action_depositDetailsFragment_to_activityDepositDetailsFragment)
+    private fun gotoWithdrawalDetails() {
+        findNavController().navigate(R.id.action_withdrawalDetailsFragment_to_withdrawalDetailsMoreInfoFragment)
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.example.bankoflunar.ui.activity.deposit
+package com.example.bankoflunar.ui.activity.investments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,13 +8,11 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bankoflunar.R
-import com.example.bankoflunar.databinding.FragmentDepositDetailsBinding
-import com.example.bankoflunar.ui.deposit.model.DepositGenerator
+import com.example.bankoflunar.databinding.FragmentInvestmentDetailsBinding
+import com.example.bankoflunar.ui.investing.model.InvestmentGenerator
 
-
-
-class DepositDetailsFragment : Fragment() {
-    private var _binding: FragmentDepositDetailsBinding? = null
+class InvestmentDetailsFragment : Fragment() {
+    private var _binding: FragmentInvestmentDetailsBinding? = null
     val binding get()  = _binding!!
     private lateinit var recyclerView: RecyclerView
 
@@ -30,21 +28,23 @@ class DepositDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentDepositDetailsBinding.inflate(inflater, container, false)
+        // Inflate the layout for this fragment
+        _binding = FragmentInvestmentDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val data = DepositGenerator.getDepositData(100)
+        val data = InvestmentGenerator.getInvestmentData(100)
         recyclerView = binding.recyclerView
-        recyclerView.adapter = DepositDetailsAdapter(
+        recyclerView.adapter = InvestmentDetailsAdapter(
             dataSet = data,
-            gotoDepositDetails = { gotoDepositDetails() },
+            goToInvestmentDetails = { gotoInvestmentDetails() },
         )
     }
 
-    private fun gotoDepositDetails() {
-        findNavController().navigate(R.id.action_depositDetailsFragment_to_activityDepositDetailsFragment)
+    private fun gotoInvestmentDetails() {
+        findNavController().navigate(R.id.action_investmentDetailsFragment_to_investmentDetailsMoreInfoFragment)
     }
+
 }
