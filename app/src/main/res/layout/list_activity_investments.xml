@@ -6,10 +6,10 @@
 
     <data>
         <variable
-            name="deposit"
-            type="com.example.bankoflunar.ui.deposit.model.Deposit" />
+            name="investment"
+            type="com.example.bankoflunar.ui.investing.model.Investment" />
         <variable
-            name="seeDepositDetails"
+            name="seeInvestmentDetails"
             type="Runnable" />
 
     </data>
@@ -23,7 +23,7 @@
         app:cardCornerRadius="@dimen/card_cornerRadius"
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="20dp"
-        android:onClick="@{() -> seeDepositDetails.run()}">
+        android:onClick="@{() -> seeInvestmentDetails.run()}">
 
 
         <LinearLayout
@@ -41,7 +41,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{deposit.accountType}"
+                    android:text="@{investment.accountType}"
                     tools:text="BTC"/>
 
                 <TextView
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:textSize="20sp"
-                    android:text="@{deposit.amount}"
+                    android:text="@{investment.amount}"
                     tools:text="$0"/>
 
 
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="30dp"
                 android:layout_gravity="center_vertical"
-                android:text="@{deposit.date}"
+                android:text="@{investment.date}"
                 android:maxLines="1"
                 tools:text="vdhfnokhhbjhbhjhwovih" />
 

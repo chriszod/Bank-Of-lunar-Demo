@@ -1,10 +1,9 @@
-package com.example.bankoflunar.ui.deposit.model
+package com.example.bankoflunar.ui.transfer.model
 
 import java.time.Instant
-import java.util.Date
 import kotlin.random.Random
 
-data class Deposit(
+data class InternalTransfer(
     val accountType: String,
     val amount: String,
     val status: String,
@@ -14,9 +13,9 @@ data class Deposit(
     val modeOfPayment: String,
 )
 
-object DepositGenerator {
-    fun getDepositData(size: Int) = List(size) { i ->
-        Deposit(
+object InternalTransferGenerator {
+    fun getInternalTransfersData(size: Int) = List(size) { i ->
+        InternalTransfer(
             accountType = if(Random.nextInt() % 4 == 3) "PERSONAL" else "SAVINGS",
             amount = (i * 100).toString(),
             status = "PENDING",
