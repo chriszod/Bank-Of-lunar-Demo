@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="accountType"
+            type="String" />
+
+        <variable
+            name="value"
+            type="String" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myPurple"
+            android:textStyle="bold"
+            android:text="@{accountType + `:`}"
+            tools:text="Savings account"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myPurple"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:visibility="@{value!=null ? View.VISIBLE : View.GONE, default=gone}"
+            android:text="@{value}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/myGold"
+            android:textStyle="bold"
+            android:visibility="@{value==null ? View.VISIBLE : View.GONE, default=visible}"
+            android:text="Create Account"/>
+    </RelativeLayout>
+</layout>

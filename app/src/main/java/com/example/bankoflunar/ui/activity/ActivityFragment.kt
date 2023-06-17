@@ -15,9 +15,6 @@ import com.example.bankoflunar.databinding.FragmentActivityBinding
 class ActivityFragment : Fragment() {
 
     private var _binding: FragmentActivityBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -38,23 +35,23 @@ class ActivityFragment : Fragment() {
     }
 
     private val gotoDeposit = Runnable {
-        findNavController().navigate(R.id.action_nav_activity_to_depositDetailsFragment)
+        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment)
     }
 
     private val gotoWithdrawal = Runnable {
-        findNavController().navigate(R.id.action_nav_activity_to_withdrawalDetailsFragment)
+        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment)
     }
 
     private val gotoInvestment = Runnable {
-        findNavController().navigate(R.id.action_nav_activity_to_investmentDetailsFragment)
+        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment)
     }
 
     private val gotoTrading = Runnable {
-        findNavController().navigate(R.id.action_nav_activity_to_tradingDetailsFragment)
+        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment)
     }
 
     private val gotoInternalTransfer = Runnable {
-        findNavController().navigate(R.id.action_nav_activity_to_internalTransfersDetailsFragment)
+        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment)
     }
 
     override fun onDestroyView() {

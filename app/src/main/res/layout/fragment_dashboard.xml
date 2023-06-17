@@ -32,31 +32,31 @@
                         android:layout_height="20dp"/>
 
                     <include
-                        layout="@layout/fragment_dashboard_account"
+                        layout="@layout/dashboard_account"
                         app:accountType="@{`Savings Account`}"
                         app:value="@{`0.00`}" />
 
                     <include
-                        layout="@layout/fragment_dashboard_account"
+                        layout="@layout/dashboard_account"
                         app:accountType="@{`Personal Account`}" />
 
                     <include
-                        layout="@layout/fragment_dashboard_account"
+                        layout="@layout/dashboard_account"
                         app:accountType="@{`Roth IRA Account`}"
                         app:value="@{`0.00`}" />
 
                     <include
-                        layout="@layout/fragment_dashboard_account"
+                        layout="@layout/dashboard_account"
                         app:accountType="@{`SEP Account`}"
                         app:value="@{`0.00`}" />
 
                     <include
-                        layout="@layout/fragment_dashboard_account"
+                        layout="@layout/dashboard_account"
                         app:accountType="@{`Joint Account`}"
                         app:value="@{`0.00`}" />
 
                     <include
-                        layout="@layout/fragment_dashboard_account"
+                        layout="@layout/dashboard_account"
                         app:accountType="@{`Traditional Account`}"
                         app:value="@{`0.00`}" />
 
@@ -75,7 +75,7 @@
                 android:layout_marginTop="20dp">
 
                 <include
-                    layout="@layout/fragment_dashboard_total"
+                    layout="@layout/dashboard_total"
                     android:layout_height="0dp"
                     android:layout_width="0dp"
                     android:layout_margin="10dp"
@@ -90,7 +90,7 @@
                     app:value="@{`0.00`}"/>
 
                 <include
-                    layout="@layout/fragment_dashboard_total"
+                    layout="@layout/dashboard_total"
                     android:layout_height="0dp"
                     android:layout_width="0dp"
                     android:layout_margin="10dp"
@@ -105,7 +105,7 @@
                     app:value="@{`0.00`}"/>
 
                 <include
-                    layout="@layout/fragment_dashboard_total"
+                    layout="@layout/dashboard_total"
                     android:layout_height="0dp"
                     android:layout_width="0dp"
                     android:layout_margin="10dp"
@@ -120,7 +120,7 @@
                     app:value="@{`0.00`}"/>
 
                 <include
-                    layout="@layout/fragment_dashboard_total"
+                    layout="@layout/dashboard_total"
                     android:layout_height="0dp"
                     android:layout_width="0dp"
                     android:layout_margin="10dp"

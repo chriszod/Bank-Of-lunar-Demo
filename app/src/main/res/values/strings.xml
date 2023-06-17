@@ -23,7 +23,7 @@
     <string name="textview_basic_interestUpdate">Interest Update - 1 day</string>
     <string name="textView_basic_duration">Duration - 10 days</string>
     <string name="textView_basic_capital">Capital - YES</string>
-    <string name="button_basic">Invest</string>
+    <string name="button_basic"></string>
     <string name="black_text">Black</string>
     <string name="textView_black_interest">Interest - %0.8</string>
     <string name="textview_black_interestUpdate">Interest Update - 1 day</string>
@@ -38,10 +38,11 @@
     <string name="button_retirement">Invest</string>
     <string name="Trading_text">Trading</string>
     <string name="realEstate_text">Real Estate</string>
-    <string name="textView_realEstate_interest">Interest - %10</string>
-    <string name="textview_realEstate_interestUpdate">Interest Update - 90 days</string>
-    <string name="textView_realEstate_duration">Duration - 6 months</string>
-    <string name="textView_realEstate_capital">Capital - YES</string>
+    <!--    <string name="textView_realEstate_interest">Interest - %10</string>-->
+    <string name="textView_realEstate_interest">Interest - %</string>
+    <string name="textview_realEstate_interestUpdate">Interest Update - </string>
+    <string name="textView_realEstate_duration">Duration - </string>
+    <string name="textView_realEstate_capital">Capital - </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
