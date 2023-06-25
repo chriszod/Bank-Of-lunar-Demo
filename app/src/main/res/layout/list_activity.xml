@@ -6,7 +6,7 @@
     <data>
         <variable
             name="activity"
-            type="com.example.bankoflunar.ui.activity.model.Activity" />
+            type="com.example.bankoflunar.ui.activity.model.TransactionModel" />
 
         <variable
             name="goToDetails"

@@ -4,18 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bankoflunar.databinding.ListActivityBinding
-import com.example.bankoflunar.ui.activity.model.Activity
+import com.example.bankoflunar.ui.activity.model.TransactionModel
 
 class ActivityAdapter(
-    private val dataSet: List<Activity>,
+    private val dataSet: List<TransactionModel>,
     private val gotoDetails: Runnable,
 ) : RecyclerView.Adapter<ActivityAdapter.ActivityAdapterViewHolder>() {
 
     inner class ActivityAdapterViewHolder(
         private val binding: ListActivityBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(activity: Activity) {
-            binding.activity = activity
+        fun bind(transactionModel: TransactionModel) {
+            binding.activity = transactionModel
             binding.goToDetails = gotoDetails
         }
     }

@@ -35,11 +35,18 @@ class ActivityFragment : Fragment() {
     }
 
     private val gotoDeposit = Runnable {
-        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 1)
+        }
+
+        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment, bundle)
     }
 
     private val gotoWithdrawal = Runnable {
-        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 2)
+        }
+        findNavController().navigate(R.id.action_nav_activity_to_activityRecyclerViewFragment, bundle)
     }
 
     private val gotoInvestment = Runnable {
