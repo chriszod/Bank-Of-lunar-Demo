@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
-            name="deposit"
-            type="com.example.bankoflunar.ui.deposit.model.Deposit" />
+            name="activity"
+            type="com.example.bankoflunar.ui.activity.model.TransactionModel" />
     </data>
 
     <LinearLayout
@@ -12,13 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="40dp"
-        android:layout_marginHorizontal="20dp">
+        android:layout_marginHorizontal="20dp"
+        tools:context=".ui.activity.ActivityDetailsFragment">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="@{deposit.amount}"
+            android:text="@{activity.amount}"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -44,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@{deposit.status}" />
+                android:text="@{activity.status}" />
 
         </LinearLayout>
 
@@ -70,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@{deposit.accountType}" />
+                android:text="@{activity.accountType}" />
 
         </LinearLayout>
 
@@ -96,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@{deposit.id}" />
+                android:text="@{activity.id}" />
 
         </LinearLayout>
 
@@ -122,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@{deposit.date + deposit.time}" />
+                android:text="@{activity.dateAndTime}" />
 
         </LinearLayout>
 
@@ -148,7 +150,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@{deposit.modeOfPayment}" />
+                android:text="@{activity.modeOfPayment}" />
 
         </LinearLayout>
 
@@ -157,6 +159,7 @@
             android:layout_height="1dp"
             android:background="@color/myAsh"
             android:layout_marginTop="15dp" />
+
 
     </LinearLayout>
 </layout>

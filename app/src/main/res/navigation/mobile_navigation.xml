@@ -4,64 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_dashboard">
-
     <fragment
         android:id="@+id/nav_dashboard"
         android:name="com.example.bankoflunar.ui.dashboard.DashboardFragment"
-        android:label="@string/menu_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard"/>
     <fragment
         android:id="@+id/nav_activity"
         android:name="com.example.bankoflunar.ui.activity.ActivityFragment"
-        android:label="@string/menu_activity"
-        tools:layout="@layout/fragment_activity" />
-
+        android:label="fragment_activity"
+        tools:layout="@layout/fragment_activity" >
+        <action
+            android:id="@+id/action_nav_activity_to_activityRecyclerViewFragment"
+            app:destination="@id/activityRecyclerViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_investing"
         android:name="com.example.bankoflunar.ui.investing.InvestingFragment"
-        android:label="@string/menu_investing"
+        android:label="fragment_investing"
         tools:layout="@layout/fragment_investing" />
-
     <fragment
         android:id="@+id/nav_trading"
         android:name="com.example.bankoflunar.ui.trading.TradingFragment"
-        android:label="@string/menu_trading"
-        tools:layout="@layout/fragment_trading" />
-
+        android:label="fragment_trading"
+        tools:layout="@layout/fragment_trading">
+        <action
+            android:id="@+id/action_nav_trading_to_cardRecyclerViewFragment"
+            app:destination="@id/cardRecyclerViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_real_estate"
         android:name="com.example.bankoflunar.ui.realEstate.RealEstateFragment"
-        android:label="@string/menu_real_estate"
+        android:label="fragment_real_estate"
         tools:layout="@layout/fragment_real_estate" />
-
     <fragment
         android:id="@+id/nav_deposit"
         android:name="com.example.bankoflunar.ui.deposit.DepositFragment"
-        android:label="@string/menu_deposit"
+        android:label="fragment_deposit"
         tools:layout="@layout/fragment_deposit" />
-
     <fragment
         android:id="@+id/nav_withdraw"
         android:name="com.example.bankoflunar.ui.withdraw.WithdrawFragment"
-        android:label="@string/menu_withdraw"
+        android:label="fragment_withdraw"
         tools:layout="@layout/fragment_withdraw" />
-
     <fragment
         android:id="@+id/nav_transfer"
         android:name="com.example.bankoflunar.ui.transfer.TransferFragment"
-        android:label="@string/menu_transfer"
+        android:label="fragment_transfer"
         tools:layout="@layout/fragment_transfer" />
-
     <fragment
         android:id="@+id/nav_rewards"
         android:name="com.example.bankoflunar.ui.rewards.RewardsFragment"
-        android:label="@string/menu_rewards"
+        android:label="fragment_rewards"
         tools:layout="@layout/fragment_rewards" />
-
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.bankoflunar.ui.settings.SettingsFragment"
-        android:label="@string/menu_settings"
+        android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/activityRecyclerViewFragment"
+        android:name="com.example.bankoflunar.ui.activity.ActivityRecyclerViewFragment"
+        android:label="fragment_activity_recycler_view"
+        tools:layout="@layout/fragment_activity_recycler_view" >
+        <action
+            android:id="@+id/action_activityRecyclerViewFragment_to_activityDetailsFragment"
+            app:destination="@id/activityDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityDetailsFragment"
+        android:name="com.example.bankoflunar.ui.activity.ActivityDetailsFragment"
+        android:label="fragment_activity_details"
+        tools:layout="@layout/fragment_activity_details"/>
+    <fragment
+        android:id="@+id/cardRecyclerViewFragment"
+        android:name="com.example.bankoflunar.ui.CardRecyclerViewFragment"
+        android:label="fragment_card_recycler_view"
+        tools:layout="@layout/fragment_card_recycler_view" />
+    <fragment
+        android:id="@+id/cardButtonDialogFragment"
+        android:name="com.example.bankoflunar.ui.CardButtonDialogFragment"
+        android:label="fragment_card_button_dialog"
+        tools:layout="@layout/fragment_card_button_dialog" />
 </navigation>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="card"
+            type="com.example.bankoflunar.ui.model.CardModel" />
+
+        <variable
+            name="gotoDialog"
+            type="Runnable" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="@dimen/card_cornerRadius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/myPurple"
+                android:text="@{card.cardType}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/investment_textSize"
+                android:text="@{card.cardSubtype}"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView_basic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/rectangle_1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{card.amount}"
+                    android:layout_alignStart="@id/imageView_basic"
+                    android:layout_alignEnd="@id/imageView_basic"
+                    android:layout_alignBottom="@id/imageView_basic"
+                    android:layout_alignTop="@id/imageView_basic"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/myPurple"
+                android:text="@{@string/textView_realEstate_interest + card.interest}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/myPurple"
+                android:text="@{@string/textview_realEstate_interestUpdate + card.interestUpdate}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/myPurple"
+                android:text="@{@string/textView_realEstate_duration + card.duration}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/myPurple"
+                android:text="@{@string/textView_realEstate_capital + card.capital}"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:text="@{@string/button_basic + card.buttonType}"
+                android:onClick="@{() -> gotoDialog.run()}"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

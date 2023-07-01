@@ -2,6 +2,10 @@ package com.example.bankoflunar
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.bankoflunar.data.repository.DepositRepository
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -20,5 +24,16 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.bankoflunar", appContext.packageName)
+    }
+
+    @Test
+    fun shouldProperlyFindDependency() {
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext.applicationContext
+        val app = appContext as BolApplication
+        val d = app.getInjectable(DepositRepository::class)
+        runBlocking{
+            val deposits = d.getDeposits()
+            println(deposits)
+        }
     }
 }

@@ -15,9 +15,6 @@ import com.example.bankoflunar.ui.activity.ActivityViewModel
 class WithdrawFragment : Fragment() {
 
     private var _binding: FragmentWithdrawBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(

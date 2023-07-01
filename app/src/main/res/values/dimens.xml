@@ -9,4 +9,5 @@
     <dimen name="investment_textsize">13sp</dimen>
     <dimen name="investment_textSize">13sp</dimen>
     <dimen name="card_cornerRadius">10dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
