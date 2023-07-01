@@ -3,7 +3,7 @@
     <data>
         <variable
             name="card"
-            type="com.example.bankoflunar.ui.model.Cards" />
+            type="com.example.bankoflunar.ui.model.CardModel" />
 
         <variable
             name="gotoDialog"

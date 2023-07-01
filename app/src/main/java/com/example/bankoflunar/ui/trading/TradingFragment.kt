@@ -39,35 +39,59 @@ class TradingFragment : Fragment() {
     }
 
     private val gotoStockCFDs = Runnable{
-        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 1)
+        }
+        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment, bundle)
     }
 
     private val gotoForexTrading = Runnable{
-        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 2)
+        }
+        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment, bundle)
     }
 
     private val gotoCommodities = Runnable{
-        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 3)
+        }
+        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment, bundle)
     }
 
     private val gotoEquityIndices = Runnable{
-        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 4)
+        }
+        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment, bundle)
     }
 
     private val gotoPreciousMetals = Runnable{
-        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 5)
+        }
+        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment, bundle)
     }
 
     private val gotoEnergies = Runnable{
-        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 6)
+        }
+        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment, bundle)
     }
 
     private val gotoShares = Runnable{
-        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 7)
+        }
+        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment, bundle)
     }
 
     private val gotoNFP = Runnable{
-        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment)
+        val bundle = Bundle().apply {
+            putInt("item", 8)
+        }
+        findNavController().navigate(R.id.action_nav_trading_to_cardRecyclerViewFragment, bundle)
     }
 
     override fun onDestroyView() {

@@ -14,30 +14,26 @@ data class TransactionModel(
     val dateAndTime: String,
     val modeOfPayment: String,
 )
-fun Deposit.toTransactionModel(): TransactionModel {
-//    val localDateTime = LocalDateTime.parse(dateTime)
-    return TransactionModel(
+fun Deposit.toTransactionModel(): TransactionModel =
+    TransactionModel(
         accountType = accountType,
         id = id,
         amount = amount,
         dateAndTime = dateTime,
         modeOfPayment = modeOfPayment,
-        date = dateTime, //localDateTime.toLocalDate().toString(),
-        time = dateTime, //localDateTime.toLocalTime().toString(),
+        date = dateTime,
+        time = dateTime,
         status = status,
     )
-}
 
-fun Withdrawal.toTransactionModel(): TransactionModel {
-//    val localDateTime = LocalDateTime.parse(dateTime)
-    return TransactionModel(
+fun Withdrawal.toTransactionModel(): TransactionModel =
+    TransactionModel(
         accountType = accountType,
         id = id,
         amount = amount,
         dateAndTime = dateTime,
         modeOfPayment = modeOfPayment,
-        date = dateTime, //localDateTime.toLocalDate().toString(),
-        time = dateTime, //localDateTime.toLocalTime().toString(),
+        date = dateTime,
+        time = dateTime,
         status = status,
     )
-}

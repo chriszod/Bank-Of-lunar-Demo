@@ -1,7 +1,5 @@
 package com.example.bankoflunar.data.model
 
-import com.google.gson.annotations.SerializedName
-
 data class Deposit(
     val accountType: String,
     val amount: String,
